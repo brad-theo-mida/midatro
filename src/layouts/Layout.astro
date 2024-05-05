@@ -1,6 +1,6 @@
 ---
 import Link from "@components/Link.astro";
-import { twitter, author, defaultMeta, navigation } from "@data/constants";
+import { author, defaultMeta, navigation } from "@data/constants";
 import "@fontsource-variable/inter";
 
 interface Props {
@@ -44,13 +44,6 @@ const canonicalURL = new URL(Astro.url).href;
     <meta property="og:site_name" content={author} />
     <meta property="og:image:alt" content={ogImage.alt} />
     <meta property="og:locale" content="en_US" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta name="twitter:site" content={twitter} />
-    <meta name="twitter:creator" content={twitter} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ogImageURL} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content={author} />
