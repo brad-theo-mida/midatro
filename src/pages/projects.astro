@@ -4,14 +4,15 @@ import Header from "@components/Header.astro";
 import Project from "@components/Project.astro";
 import { getCollection } from "astro:content";
 
-const projects = (await getCollection("projects"))
-
+const projects = await getCollection("projects");
 ---
 
-<Layout title="Projects | Kevin Zuniga Cuellar">
+<Layout title="Projects | Brad Theo">
   <Header title="Projects" />
   <p class="max-w-prose font-normal leading-relaxed">
-    Extensive project portfolio showcasing adeptness in leading cross-functional teams, implementing innovative solutions, and leveraging a robust tech stack to drive business outcomes and exceed client expectations.
+    Extensive project portfolio showcasing adeptness in leading cross-functional
+    teams, implementing innovative solutions, and leveraging a robust tech stack
+    to drive business outcomes and exceed client expectations.
   </p>
   <ul class="mt-6 grid grid-cols-1 gap-6">
     {projects.map((projects) => <Project {...projects} />)}

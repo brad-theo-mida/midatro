@@ -20,7 +20,7 @@ export default defineConfig({
   image: {
     service: sharpImageService(),
   },
-  site: "https://www.kevinzunigacuellar.com",
+  site: "https://midatro.vercel.app/",
   vite: {
     plugins: [rawFonts([".ttf", ".woff"])],
     optimizeDeps: {
