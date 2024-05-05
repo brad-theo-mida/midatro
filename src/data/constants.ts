@@ -1,13 +1,11 @@
-export const twitter = "@kevinzunigacuel";
-export const author = "Kevin Zuniga Cuellar";
+export const author = "Bradford Theodoroff";
 
 export const defaultMeta = {
-  title: "Kevin Zuniga Cuellar",
-  description:
-    "Welcome to my personal website! I am a a software engineer based in Burlington, VT. I build tools for developers that help them build faster and better software",
+  title: "Bradford Theodoroff",
+  description: "Welcome to my personal website!",
   ogImage: {
     src: "/static/banner.png",
-    alt: "Kevin smiling",
+    alt: "Brad smiling",
   },
 };
 
@@ -29,25 +27,42 @@ export const navigation = [
 export const socials = [
   {
     icon: "linkedin",
-    href: "https://www.linkedin.com/in/kevinzunigacuellar/",
-    username: "kevinzunigacuellar",
+    href: "https://linkedin.com/in/brad-theo-mida",
+    username: "brad-theo-mida",
   },
   {
     icon: "github",
-    href: "https://github.com/kevinzunigacuellar",
-    username: "kevinzunigacuellar",
+    href: "https://github.com/brad-theo-mida",
+    username: "brad-theo-mida",
+  },
+];
+
+export const links = [
+  {
+    icon: "star",
+    href: "/resume.pdf",
+    username: "Resume",
   },
   {
-    icon: "x",
-    href: "https://twitter.com/kevinzunigacuel",
-    username: "kevinzunigacuel",
+    icon: "external-link",
+    href: "https://koalendar.com/e/meet-with-bradford-theodoroff",
+    username: "Calendar",
   },
 ];
 
 export const skills = [
   {
-    label: "Astro",
-    icon: "astro",
+    label: "React",
+    icon: "react",
+  },
+  {
+    label: "TypeScript",
+    icon: "typescript",
+  },
+  {
+    label: "Python",
+    icon: "python",
+    size: 40,
   },
   {
     label: "C++",
@@ -60,16 +75,7 @@ export const skills = [
     size: 35,
   },
   {
-    label: "Python",
-    icon: "python",
-    size: 40,
-  },
-  {
-    label: "React",
-    icon: "react",
-  },
-  {
-    label: "TypeScript",
-    icon: "typescript",
+    label: "Astro",
+    icon: "astro",
   },
 ];

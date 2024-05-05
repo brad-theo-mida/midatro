@@ -1,0 +1,12 @@
+title: NetBeez
+description: NetBeez is a network monitoring platform that provides comprehensive visibility into network performance and reliability.
+website: https://netbeez.net/
+languages:
+  - React
+  - TypeScript
+  - GraphQL
+  - Node
+  - Express
+  - MongoDB
+  - Docker
+  - Jest

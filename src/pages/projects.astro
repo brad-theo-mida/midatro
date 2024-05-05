@@ -4,32 +4,16 @@ import Header from "@components/Header.astro";
 import Project from "@components/Project.astro";
 import { getCollection } from "astro:content";
 
-const oss = (await getCollection("oss")).sort(
-  (a, b) => b.data.stars - a.data.stars,
-);
+const projects = (await getCollection("projects"))
 
-const personalProjects = (await getCollection("personal-projects")).sort(
-  (a, b) => b.data.stars - a.data.stars,
-);
 ---
 
 <Layout title="Projects | Kevin Zuniga Cuellar">
   <Header title="Projects" />
   <p class="max-w-prose font-normal leading-relaxed">
-    My passion lies in creating and sharing meaningful projects. Below, you'll
-    find a selection of my favorite creations, either authored or contributed to
-    by me.
+    Extensive project portfolio showcasing adeptness in leading cross-functional teams, implementing innovative solutions, and leveraging a robust tech stack to drive business outcomes and exceed client expectations.
   </p>
-  <h2 class="mt-12 text-xl font-semibold dark:text-zinc-100 text-zinc-900">
-    Open Source
-  </h2>
   <ul class="mt-6 grid grid-cols-1 gap-6">
-    {oss.map((oss) => <Project {...oss} />)}
-  </ul>
-  <h2 class="mt-12 text-xl font-semibold dark:text-zinc-100 text-zinc-900">
-    Authored Projects
-  </h2>
-  <ul class="mt-6 grid grid-cols-1 gap-6">
-    {personalProjects.map((projects) => <Project {...projects} />)}
+    {projects.map((projects) => <Project {...projects} />)}
   </ul>
 </Layout>

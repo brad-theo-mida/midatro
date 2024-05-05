@@ -15,11 +15,7 @@ const blogCollection = defineCollection({
 const projectCollection = defineCollection({
   type: "data",
   schema: z.object({
-    owner: z.string(),
-    repo: z.string(),
-    stars: z.number(),
-    forks: z.number(),
-    url: z.string().url(),
+    title: z.string(),
     description: z.string(),
     languages: z.array(z.string()),
     website: z.string().url().optional(),
@@ -28,6 +24,5 @@ const projectCollection = defineCollection({
 
 export const collections = {
   blog: blogCollection,
-  oss: projectCollection,
-  "personal-projects": projectCollection,
+  projects: projectCollection,
 };

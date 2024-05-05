@@ -1,21 +1,13 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import authorImage from "~/assets/me.jpeg";
+import authorImage from "~/assets/me.png";
 import { Picture } from "astro:assets";
-import { skills, socials } from "@data/constants";
+import { skills, socials, links } from "@data/constants";
 import { getCollection } from "astro:content";
 import Skill from "@components/Skill.astro";
 import Social from "@components/Social.astro";
 import Project from "@components/Project.astro";
 import Blog from "@components/Blog.astro";
-
-const oss = (await getCollection("oss"))
-  .sort((a, b) => b.data.stars - a.data.stars)
-  .slice(0, 3);
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
 ---
 
 <Layout wide={true}>
@@ -23,8 +15,8 @@ const posts = (await getCollection("blog")).sort(
     <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
       <Picture
         class="block rounded-full aspect-square overflow-hidden"
-        height={80}
-        width={80}
+        height={225}
+        width={225}
         src={authorImage}
         loading="eager"
         densities={[1.5, 2]}
@@ -34,17 +26,21 @@ const posts = (await getCollection("blog")).sort(
       <h1
         class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl"
       >
-        Kevin
+        Bradford Theodoroff
       </h1>
       <p class="dark:text-zinc-300 text-zinc-700">
-        <a
-          href="https://twitter.com/astrodotbuild"
-          class="dark:text-teal-400 text-blue-600 underline underline-offset-4"
-          >@astrodotbuild</a
-        > Maintainer
+        <ul>
+          <li>Tech-Enthusiast</li>
+          <li>Problem Solver</li>
+          <li>Self-Motivated</li>
+          <li>Data-Driven</li>
+        </ul>
       </p>
       <ul class="mt-4 sm:mt-6 grid grid-cols-1 gap-2 sm:gap-1">
         {socials.map((s) => <Social {...s} />)}
+      </ul>
+      <ul class="mt-4 sm:mt-6 grid grid-cols-1 gap-2 sm:gap-1">
+        {links.map((s) => <Social {...s} />)}
       </ul>
     </div>
     <section class="flex-1">
@@ -52,45 +48,34 @@ const posts = (await getCollection("blog")).sort(
         About me
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        Hello! I'm Kevin, a software engineer based in Burlington, VT. I build
-        tools for developers that help them build faster and better software.
+        Experienced Senior Full Stack Developer/AI Engineer boasting 12 years in web and mobile app development, alongside 4 years dedicated to AI/ML, adept at crafting innovative solutions and driving impactful insights through cross-functional collaboration.
       </p>
       <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
         Favorite Technologies
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
         I love exploring new libraries, programing languages and frameworks.
-        Here is a list of technologies that I have worked with at school, side
-        projects and open source.
+        Here is a list of technologies that I love to work with.
       </p>
       <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {skills.map((s) => <Skill {...s} />)}
       </ul>
       <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Open Source
+        Projects
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        I love open source and I have been contributing to different projects
-        for the some time. Here are some of the most popular projects that I
-        have contributed to.
+        Extensive project portfolio showcasing adeptness in leading cross-functional teams, implementing innovative solutions, and leveraging a robust tech stack to drive business outcomes and exceed client expectations.
       </p>
-      <ul class="mt-6 grid grid-cols-1 gap-5">
-        {oss.map((oss) => <Project minimal {...oss} />)}
-      </ul>
       <a
         class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
         href="/projects/">View all projects &rarr;</a
       >
       <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Recent Posts
+        Blog
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        My personal collection of code snippets, starter guides, tutorials and
-        interesting things I found online.
+        In the dynamic world of software development, mastering key practices is essential to ensuring high-quality deliverables and driving impactful outcomes. In this blog, we delve into the professional approach to crucial aspects of software development that shape the foundation of our work.
       </p>
-      <ul class="mt-6 grid grid-cols-1 gap-6">
-        {posts.map((post) => <Blog minimal {...post} />)}
-      </ul>
       <a
         class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
         href="/blog/">View all posts &rarr;</a
