@@ -1,7 +1,5 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import authorImage from "~/assets/me.png";
-import { Picture } from "astro:assets";
 import { skills, socials, links } from "@data/constants";
 import { getCollection } from "astro:content";
 import Skill from "@components/Skill.astro";
@@ -13,16 +11,6 @@ import Blog from "@components/Blog.astro";
 <Layout wide={true}>
   <div class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
     <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
-      <Picture
-        class="block rounded-full aspect-square overflow-hidden"
-        height={225}
-        width={225}
-        src={authorImage}
-        loading="eager"
-        densities={[1.5, 2]}
-        formats={["avif", "webp"]}
-        alt="Author smiling"
-      />
       <h1
         class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl"
       >
